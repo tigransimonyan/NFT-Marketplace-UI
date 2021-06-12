@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/NFT-Marketplace-UI/static/js/main.6fb44e8b.chunk.js",
-    "main.js.map": "/NFT-Marketplace-UI/static/js/main.6fb44e8b.chunk.js.map",
-    "runtime-main.js": "/NFT-Marketplace-UI/static/js/runtime-main.621038f3.js",
-    "runtime-main.js.map": "/NFT-Marketplace-UI/static/js/runtime-main.621038f3.js.map",
-    "static/js/2.7708fbdd.chunk.js": "/NFT-Marketplace-UI/static/js/2.7708fbdd.chunk.js",
-    "static/js/2.7708fbdd.chunk.js.map": "/NFT-Marketplace-UI/static/js/2.7708fbdd.chunk.js.map",
-    "static/js/3.937c875c.chunk.js": "/NFT-Marketplace-UI/static/js/3.937c875c.chunk.js",
-    "static/js/3.937c875c.chunk.js.map": "/NFT-Marketplace-UI/static/js/3.937c875c.chunk.js.map",
+    "main.js": "/NFT-Marketplace-UI/static/js/main.752f81d6.chunk.js",
+    "main.js.map": "/NFT-Marketplace-UI/static/js/main.752f81d6.chunk.js.map",
+    "runtime-main.js": "/NFT-Marketplace-UI/static/js/runtime-main.b66c3eb8.js",
+    "runtime-main.js.map": "/NFT-Marketplace-UI/static/js/runtime-main.b66c3eb8.js.map",
+    "static/js/2.d475ea1b.chunk.js": "/NFT-Marketplace-UI/static/js/2.d475ea1b.chunk.js",
+    "static/js/2.d475ea1b.chunk.js.map": "/NFT-Marketplace-UI/static/js/2.d475ea1b.chunk.js.map",
+    "static/js/3.e746a064.chunk.js": "/NFT-Marketplace-UI/static/js/3.e746a064.chunk.js",
+    "static/js/3.e746a064.chunk.js.map": "/NFT-Marketplace-UI/static/js/3.e746a064.chunk.js.map",
     "index.html": "/NFT-Marketplace-UI/index.html",
-    "static/js/2.7708fbdd.chunk.js.LICENSE.txt": "/NFT-Marketplace-UI/static/js/2.7708fbdd.chunk.js.LICENSE.txt",
+    "static/js/2.d475ea1b.chunk.js.LICENSE.txt": "/NFT-Marketplace-UI/static/js/2.d475ea1b.chunk.js.LICENSE.txt",
     "static/media/logo.034ef726.svg": "/NFT-Marketplace-UI/static/media/logo.034ef726.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.621038f3.js",
-    "static/js/2.7708fbdd.chunk.js",
-    "static/js/main.6fb44e8b.chunk.js"
+    "static/js/runtime-main.b66c3eb8.js",
+    "static/js/2.d475ea1b.chunk.js",
+    "static/js/main.752f81d6.chunk.js"
   ]
 }
