@@ -6,6 +6,7 @@ import {
   Input,
   Stack,
   Link,
+  Text,
   InputGroup,
   InputLeftElement,
   IconButton,
@@ -29,7 +30,7 @@ const NAV_ITEMS = [
   },
 ];
 
-function NavLink({ navItem }) {
+function DesktopNavLink({ navItem }) {
   return (
     <Link
       href={navItem.href}
@@ -46,17 +47,40 @@ function NavLink({ navItem }) {
   );
 }
 
+function MobileNavLink({ navItem }) {
+  return (
+    <Flex
+      px={4}
+      py={4}
+      as={Link}
+      href={navItem.href}
+      justify={'space-between'}
+      borderStyle={'solid'}
+      borderTop="1px"
+      borderColor={useColorModeValue('gray.200', 'gray.900')}
+      align={'center'}
+      _hover={{
+        textDecoration: 'none',
+      }}
+    >
+      <Text fontWeight={700} color={useColorModeValue('gray.600', 'gray.200')}>
+        {navItem.label}
+      </Text>
+    </Flex>
+  );
+}
+
 function Header() {
   const { isOpen, onToggle } = useDisclosure();
   return (
     <Box>
       <Flex
-        borderBottom="1px"
-        borderColor="gray.200"
         h="78px"
         px={{ base: 4 }}
+        color={useColorModeValue('gray.600', 'white')}
         bg={useColorModeValue('white', 'gray.800')}
         borderStyle={'solid'}
+        borderBottom="1px"
         borderColor={useColorModeValue('gray.200', 'gray.900')}
         align={'center'}
       >
@@ -76,7 +100,7 @@ function Header() {
         <Box pl="5" display={{ base: 'none', md: 'flex' }}>
           <Stack pl="5" direction="row" align="center" spacing={6}>
             {NAV_ITEMS.map((navItem, index) => (
-              <NavLink key={index} navItem={navItem} />
+              <DesktopNavLink key={index} navItem={navItem} />
             ))}
           </Stack>
           <Stack pl="7" direction="row" align="center" spacing={3}>
@@ -89,7 +113,12 @@ function Header() {
             <ColorModeSwitcher justifySelf="flex-end" />
           </Stack>
         </Box>
-        <Box display={{ base: 'flex', md: 'none' }}>
+        <Stack direction="row" display={{ base: 'flex', md: 'none' }}>
+          <IconButton
+            icon={<SearchIcon />}
+            variant="outline"
+            aria-label={'Toggle Navigation'}
+          />
           <IconButton
             onClick={onToggle}
             icon={
@@ -98,9 +127,28 @@ function Header() {
             variant="outline"
             aria-label={'Toggle Navigation'}
           />
-        </Box>
+        </Stack>
       </Flex>
-      <Collapse in={isOpen} animateOpacity></Collapse>
+      <Collapse in={isOpen} animateOpacity>
+        <Stack px={4} py={4} direction="row" align="center" spacing={3}>
+          <Button flex={1} variant={'solid'} colorScheme={'teal'} size="md">
+            Create
+          </Button>
+          <Button flex={1} variant={'outline'} colorScheme={'teal'} size="md">
+            Connect wallet
+          </Button>
+          <ColorModeSwitcher justifySelf="flex-end" />
+        </Stack>
+        <Box
+          borderStyle={'solid'}
+          borderBottom="1px"
+          borderColor={useColorModeValue('gray.200', 'gray.900')}
+        >
+          {NAV_ITEMS.map((navItem, index) => (
+            <MobileNavLink navItem={navItem} key={index} />
+          ))}
+        </Box>
+      </Collapse>
     </Box>
   );
 }
